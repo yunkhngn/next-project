@@ -1,7 +1,14 @@
+import {Metatags} from '../components/Hooks/'
+
+const description = {
+    title: 'Projects - Khoa Nguyễn',
+    url: 'https://www.khoanguyen.dev/projects',
+}
+
 const projects = () => {
     return (
         <div>
-            Enter
+            <Metatags description={description}/>
         </div>
     );
 }
