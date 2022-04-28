@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Icon from "./BarIcon";
 import Link from "next/link";
 import Spacer from "./Spacer";
