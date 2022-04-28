@@ -15,6 +15,10 @@
     background: #fefefe;
     border: 1px solid rgb(0, 0, 0, 0.1);
     box-shadow:  0 30px 60px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    -ms-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
     padding-left: 5px;
     padding-right: 5px;
 }
