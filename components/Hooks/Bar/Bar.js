@@ -85,11 +85,10 @@ const Bar = () => {
         <div className="Bar--section ">
           {BarNavigate.map((item) => (
              <Link href={item.url} passHref key={item.id}>
-              <a className="Bar--section" key={item.id}>
+              <a className="Bar--section">
                 <Icon
                   icon={item.icon}
                   name={item.name}
-                  key={item.id}
                   alt={item.name}
                   changeColor={changeColor}
                   url={item.url}
@@ -104,7 +103,6 @@ const Bar = () => {
         <div className="Bar--section ">
           {SocialMedia.map((item) => (
             <Icon
-              key={item.id}
               icon={item.icon}
               name={item.name}
               key={item.id}
@@ -137,5 +135,6 @@ const Bar = () => {
     </div>
     );
 }
+
 
 export default Bar;
