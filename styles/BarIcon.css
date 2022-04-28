@@ -1,0 +1,74 @@
+.Icon {
+    font-size: 20px;
+    transition: transform 0.2s, margin 200ms, translateY 0.2s, color 0.2s,
+      background 0.2s;
+  }
+
+.Icon--container {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.Icon:hover {
+    transform: scale(1.4) translateY(-20px);
+    margin: 20px 20px 0px 20px;
+}
+
+.Icon--seperate {
+    margin: 40px;
+}
+
+.Icon--bounce {
+    animation: clicked 0.75s infinite;
+    overflow: visible;
+}
+
+@media screen and (max-width: 650px) {
+    .Icon:hover{
+    transform: scale(1.2) translateY(-10px);
+    margin: 10px;
+    }
+    .Icon{
+    font-size: 20px;
+    }
+}
+
+@keyframes clicked {
+    0% {
+    transform: translateY(0) ease-in;
+    }
+    50% {
+    transform: translateY(-40px);
+    }
+    100% {
+    transform: translateY(0) ease-out;
+    }
+}
+
+.Iconlight {
+    color: #1f1f1f;
+    background-image: linear-gradient( 45deg, hsl(0 0% 97.3%), hsl(0 0% 90.9%), hsl(0 0% 97.3%), hsl(0 0% 90.9%));
+    background-size: 200% 100%;
+    border-radius: 11px;
+    height: 46px;
+    width: 46px;
+    margin: 7px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Icondark {
+    color: #ececec;
+    background: #212121;
+    border-radius: 11px;
+
+    height: 46px;
+    width: 46px;
+    margin: 7px 5px 2px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
