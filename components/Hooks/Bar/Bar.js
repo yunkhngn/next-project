@@ -84,8 +84,8 @@ const Bar = () => {
         <Spacer />
         <div className="Bar--section ">
           {BarNavigate.map((item) => (
-             <Link href={item.url} passHref>
-              <a className="Bar--section">
+             <Link href={item.url} passHref key={item.id}>
+              <a className="Bar--section" key={item.id}>
                 <Icon
                   icon={item.icon}
                   name={item.name}
@@ -104,6 +104,7 @@ const Bar = () => {
         <div className="Bar--section ">
           {SocialMedia.map((item) => (
             <Icon
+              key={item.id}
               icon={item.icon}
               name={item.name}
               key={item.id}
