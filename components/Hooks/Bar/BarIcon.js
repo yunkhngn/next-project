@@ -2,7 +2,7 @@ import {Icon} from 'atomize'
 import { useState } from 'react';
 import { useRouter } from 'next/router'
 
-const BarIcon = ({icon, name, url, clickHandler, changeColor}) => {
+const BarIcon = ({icon, name, url, clickHandler, changeColor, theme}) => {
     const [bounce, setBounce] = useState(false);
     const changeHandler = () => {
         setBounce(true);
@@ -21,7 +21,7 @@ const BarIcon = ({icon, name, url, clickHandler, changeColor}) => {
                 className={bounce ? "Icon--bounce icon2" : "icon2"}
             >
                 <span
-                className={"Icon Icon" + 'light'}
+                className={"Icon Icon" + theme}
                 onClick={() => {
                     changeHandler();
                     if (clickHandler) {

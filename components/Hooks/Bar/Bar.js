@@ -61,10 +61,15 @@ setTimeout(() => {
 }, 750);
 };
 
-const Bar = () => {
+const Bar = ({setTheme, theme}) => {
+  const changeTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    localStorage.setItem("themeCheck", theme === 'light' ? 'dark' : 'light');
+  };
+
   const changeColor = true
     return (
-        <div className="Bar--container">
+        <div className={"Bar--container Bar--"+theme}>
             <div className="Bar">
                 <div className="Bar--section">
                 <Link href="/" passHref>
@@ -74,7 +79,8 @@ const Bar = () => {
                         name="Home"
                         url="/"
                         alt="Home"
-                        changeColor={changeColor}
+                        changeColor={theme === 'light' ? true : false}
+                        theme={theme}
                     >
                     </Icon>
                   </a>
@@ -89,8 +95,9 @@ const Bar = () => {
                   icon={item.icon}
                   name={item.name}
                   alt={item.name}
-                  changeColor={changeColor}
+                  changeColor={theme === 'light' ? true : false}
                   url={item.url}
+                  theme={theme}
                 />
               </a>
             </Link>
@@ -107,7 +114,8 @@ const Bar = () => {
               key={item.id}
               clickHandler={() => openURL(item.link)}
               alt={item.name}
-              changeColor={changeColor}
+              changeColor={theme === 'light' ? true : false}
+              theme={theme}
             />
           ))}
         </div>
@@ -119,7 +127,9 @@ const Bar = () => {
             icon="SettingsSolid"
             name="Change Theme"
             alt="Change Theme"
-            changeColor={changeColor}
+            changeColor={theme === 'light' ? true : false}
+            clickHandler={changeTheme}
+            theme={theme}
           />
         </div>
         <div className="Bar--section ">
@@ -127,8 +137,9 @@ const Bar = () => {
             icon="UpArrow"
             name="Scroll up"
             alt="Scroll up"
-            changeColor={changeColor}
+            changeColor={theme === 'light' ? true : false}
             clickHandler={() => window.scrollTo(0, 0)}
+            theme={theme}
           />
         </div>
       </div>

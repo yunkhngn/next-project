@@ -12,8 +12,6 @@
     transform: translate(-50%, 0);
     animation: smoothIn 0.5s ease-in-out;
     border-radius: 16px;
-    background: #fefefe;
-    border: 1px solid rgb(0, 0, 0, 0.1);
     box-shadow:  0 30px 60px rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
@@ -21,6 +19,15 @@
     -ms-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
     padding-left: 5px;
     padding-right: 5px;
+}
+.Bar--dark{
+    background: rgba(22, 22, 22, 0.8);
+    border: 1px solid hsl(0 0% 100% / 0.077);
+}
+
+.Bar--light{
+    background: #fefefe;
+    border: 1px solid rgb(0, 0, 0, 0.1);
 }
 
 .Bar {

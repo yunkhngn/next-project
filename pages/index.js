@@ -9,7 +9,7 @@ const description = {
 
 export default function Home() {
   return (
-    <Div bg="white" w="100%" h="100vh" maxH="-webkit-fill-available">
+    <Div>
       <Metatags description={description}/>
     </Div>
   )
