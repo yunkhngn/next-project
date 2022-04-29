@@ -18,7 +18,7 @@ export default function Home({theme}) {
         >
           A Software Engineer and a Senior Designer.
         </Text>
-        <Spacer theme={theme}/>
+        <Spacer length="50px" theme={theme}/>
         <Text fontFamily="Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue" 
         textColor={theme === 'light' ? 'hsl(0 0% 43.5%)' : 'hsl(0 0% 62.8%)'} 
         textWeight="400" textSize="paragraph"
