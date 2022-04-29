@@ -11,19 +11,19 @@ export default function Home({theme}) {
   return (
     <Div maxW="720px" m="auto" textColor="white" p={{t:{xs:"40px", md:"120px"}, l:"16px", r:"16px"}}>
       <Metatags description={description}/>
-        <Text fontFamily="Playfair Display" textColor={theme === 'light' ? 'dark' : 'white'} textWeight="550" textSize="heading">Khoa Nguyen</Text>
+        <Text fontFamily="Playfair Display" textColor={theme === 'light' ? '#171717' : '#ededed'} textWeight="550" textSize="heading">Khoa Nguyen</Text>
         <Text fontFamily="Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue" 
         textColor={theme === 'light' ? 'hsl(0 0% 43.5%)' : 'hsl(0 0% 62.8%)'} 
-        textWeight="400" textSize="paragraph"
+        textWeight="450" textSize="paragraph"
         >
-          A Software Engineer and a Senior Designer.
+          Senior designer / Software engineer
         </Text>
         <Spacer length="50px" theme={theme}/>
         <Text fontFamily="Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue" 
         textColor={theme === 'light' ? 'hsl(0 0% 43.5%)' : 'hsl(0 0% 62.8%)'} 
-        textWeight="400" textSize="paragraph"
+        textWeight="450" textSize="paragraph"
         >
-          Khoa Nguyen is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs, Nextjs, typing safe code with Typescript or dealing with algorithms and data structures.
+          Khoa Nguyen is a software engineer and graphic designer in Hanoi, Vietnam. He enjoys building software with Reactjs, Nextjs, typing safe code with Typescript or dealing with algorithms and data structures.
         </Text>
     </Div>
   )

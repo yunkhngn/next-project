@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
 
 a {
@@ -21,4 +21,14 @@ a {
   height: 100vh;
   max-height: -webkit-fill-available;
   max-height: -moz-available;
+}
+
+.selectionlight ::selection {
+  background-color: #febdc1;
+  color: #ffffff;
+}
+
+.selectiondark ::selection {
+  background-color: #febdc1;
+  color: #161616;
 }

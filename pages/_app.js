@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StyletronProvider value={styletron}>
       <Div bg={theme === "light" ? "white" : "#161616"} w="100%">
-        <div className='webkit'>
+        <div className={'webkit selection'+theme}>
           <Metatags description='null'/>
           <StyleReset/>
           <Component theme={theme} {...pageProps} />
