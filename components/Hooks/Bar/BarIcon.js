@@ -29,7 +29,7 @@ const BarIcon = ({icon, name, url, clickHandler, changeColor, theme}) => {
                     }
                 }}
                 >
-                <Icon name={bounce ? "Loading" : icon} color={changeColor ? "#858585" : "gray300"} size="22px"/>
+                <Icon name={bounce ? "Loading" : icon} color={changeColor ? "#858585" : "#7e7e7e"} size="22px"/>
                 </span>
             </div>
             <Icon d={displayNav ? null : "none" } name="Dot" m="auto" color={changeColor ? "#dbdbdb" : "#3e3e3e"} size="10px"/>
