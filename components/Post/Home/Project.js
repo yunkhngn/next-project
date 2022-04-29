@@ -52,7 +52,7 @@ const Project = ({theme,themeUse}) => {
                     </div>
                 ))}
             </Div>
-            <Link href="/writings"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a></Link>
+            <Link href="/projects"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a></Link>
             <ElementSpace/>
         </div>
     );
