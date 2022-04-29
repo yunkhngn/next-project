@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <Div bg="white" w="100%" h="100vh" maxH="-webkit-fill-available">
       <Metatags description={description}/>
-      this is the main page
     </Div>
   )
 }

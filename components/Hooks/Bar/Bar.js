@@ -128,6 +128,7 @@ const Bar = () => {
             name="Scroll up"
             alt="Scroll up"
             changeColor={changeColor}
+            clickHandler={() => window.scrollTo(0, 0)}
           />
         </div>
       </div>
