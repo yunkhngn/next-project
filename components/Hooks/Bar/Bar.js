@@ -86,7 +86,7 @@ const Bar = ({setTheme, theme}) => {
                   </a>
                 </Link>
                 </div>
-        <Spacer />
+        <Spacer theme={theme}/>
         <div className="Bar--section ">
           {BarNavigate.map((item) => (
              <Link href={item.url} passHref key={item.id}>
@@ -104,7 +104,7 @@ const Bar = ({setTheme, theme}) => {
           ))}
         </div>
 
-        <Spacer />
+        <Spacer theme={theme}/>
 
         <div className="Bar--section ">
           {SocialMedia.map((item) => (
@@ -120,7 +120,7 @@ const Bar = ({setTheme, theme}) => {
           ))}
         </div>
 
-        <Spacer />
+        <Spacer theme={theme}/>
 
         <div className="Bar--section ">
           <Icon

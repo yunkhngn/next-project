@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       <Div bg={theme === "light" ? "white" : "#161616"} w="100%" h="100vh" maxH="-webkit-fill-available">
         <Metatags description='null'/>
         <StyleReset/>
-        <Component {...pageProps} />
+        <Component theme={theme} {...pageProps} />
         <Bar theme={theme} setTheme={setTheme}/>
      </Div>
     </StyletronProvider>
