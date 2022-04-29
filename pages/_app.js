@@ -7,18 +7,9 @@ import { Provider as StyletronProvider } from 'styletron-react'
 import {StyleReset} from 'atomize'
 import {useState} from 'react'
 import {Div} from 'atomize'
-import {useEffect} from 'react'
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light')
-
-  useEffect(() => {
-    var themeCheck = localStorage.getItem("themeCheck");
-    if (themeCheck === null) {
-      localStorage.setItem("themeCheck", "light");
-    }
-    setTheme(localStorage.getItem("themeCheck"));
-  }, []);
 
   return (
     <StyletronProvider value={styletron}>
