@@ -22,11 +22,13 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <StyletronProvider value={styletron}>
-      <Div bg={theme === "light" ? "white" : "#161616"} w="100%" h="100vh" maxH="-webkit-fill-available">
-        <Metatags description='null'/>
-        <StyleReset/>
-        <Component theme={theme} {...pageProps} />
-        <Bar theme={theme} setTheme={setTheme}/>
+      <Div bg={theme === "light" ? "white" : "#161616"} w="100%">
+        <div className='webkit'>
+          <Metatags description='null'/>
+          <StyleReset/>
+          <Component theme={theme} {...pageProps} />
+          <Bar theme={theme} setTheme={setTheme}/>
+        </div>
      </Div>
     </StyletronProvider>
   )

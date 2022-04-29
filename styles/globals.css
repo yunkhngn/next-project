@@ -16,3 +16,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.webkit{
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  max-height: -moz-available;
+  max-height: fill-available;
+}
