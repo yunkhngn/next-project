@@ -61,13 +61,11 @@ setTimeout(() => {
 }, 750);
 };
 
-const Bar = ({setTheme, theme}) => {
+const Bar = ({setTheme, theme, setThemeUse, themeProvider}) => {
   const changeTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
-    localStorage.setItem("themeCheck", theme === 'light' ? 'dark' : 'light');
+    setThemeUse(theme === 'light' ? themeProvider[1] : themeProvider[0]);
   };
-
-  const changeColor = true
     return (
         <div className={"Bar--container Bar--"+theme}>
             <div className="Bar">

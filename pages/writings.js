@@ -1,16 +1,21 @@
-import {Metatags} from '../components/Hooks/'
+import {Template} from '../components/Template/'
+import {Intro,Blog, Project} from '../components/Post/'
+import {Footer} from '../components/Hooks/'
 
 const description = {
-  title: 'Writings - Khoa Nguyễn',
-  url: 'https://www.khoanguyen.dev/writings',
+    title: 'Writings - Khoa Nguyễn',
+    url: 'https://www.khoanguyen.dev/writings',
 }
 
-const writing = () => {
+const writings = ({themeUse,theme}) => {
     return (
-        <div>
-            <Metatags description={description}/>
-        </div>
+        <Template description={description} height="100%">
+            <Intro themeUse={themeUse} theme={theme}/>
+            <Project themeUse={themeUse} theme={theme}/>
+            <Blog themeUse={themeUse} theme={theme}/>
+            <Footer themeUse={themeUse} theme={theme}/>
+        </Template>
     );
 }
 
-export default writing;
+export default writings;

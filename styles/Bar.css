@@ -21,7 +21,7 @@
     padding-right: 5px;
 }
 .Bar--dark{
-    background: rgba(22, 22, 22, 0.8);
+    background: rgba(22, 22, 22, 1);
     border: 1px solid hsl(0 0% 100% / 0.077);
 }
 
