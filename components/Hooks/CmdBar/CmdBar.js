@@ -66,7 +66,7 @@ const portalDark = {
     background: "#161616",
 };    
 
-function RenderResults() {
+function RenderResults({theme}) {
 const { results, rootActionId } = useMatches();
 
 return (
@@ -80,6 +80,7 @@ return (
             action={item}
             active={active}
             currentRootActionId={rootActionId}
+            theme={theme}
         />
         )
     }
@@ -93,6 +94,7 @@ const ResultItem = React.forwardRef(
         action,
         active,
         currentRootActionId,
+        theme,
         }
         , ref
     ) => {
@@ -103,15 +105,14 @@ const ResultItem = React.forwardRef(
         );
         return action.ancestors.slice(index + 1);
         }, [action.ancestors, currentRootActionId]);
-    
         return (
         <div
             ref={ref}
             style={{
             padding: "12px 16px",
-            background: active ? "var(--a1)" : "transparent",
+            background: active ? `${theme === 'light' ? 'rgba(0,0,0,0.05)' : 'rgba(0,0,0,0.3)'}` : "transparent",
             borderLeft: `2px solid ${
-                active ? "var(--foreground)" : "transparent"
+                active ? "#a8a7a5" : "transparent"
             }`,
             display: "flex",
             alignItems: "center",
@@ -188,7 +189,7 @@ const CommandBar = ({theme}) => {
         <KBarPositioner style={theme === 'light' ? portalLight : portalDark}>
             <KBarAnimator style={theme === 'light' ? animatorLight : animatorDark}>
             <KBarSearch style={theme === 'light' ? searchLight : searchDark}/>
-            <RenderResults/>
+            <RenderResults theme={theme}/>
             </KBarAnimator>
         </KBarPositioner>
         </KBarPortal>
