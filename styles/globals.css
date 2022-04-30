@@ -19,8 +19,6 @@ a {
 
 .webkit{
   height: 100%;
-  max-height: -webkit-fill-available;
-  max-height: -moz-available;
 }
 
 .selectionlight ::selection {
