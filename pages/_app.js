@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import '../styles/Bar.css'
 import '../styles/BarIcon.css'
-import { Bar, CmdBar} from '../components/Hooks/'
+import { Bar, CmdBar, Footer} from '../components/Hooks/'
 import {styletron} from '../styletron'
 import { Provider as StyletronProvider } from 'styletron-react'
 import {StyleReset} from 'atomize'
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
       keywords: "back",
       section: "Navigation",
       perform: () => router.push('/'),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Navigating to the home page.",
     },
     {
       id: "aboutMeAction",
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
       keywords: "about me description",
       section: "Navigation",
       perform: () => router.push('/about'),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "A little bit about me.",
     },
     {
       id: "projectsAction",
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
       keywords: "project projects work featured",
       section: "Navigation",
       perform: () => router.push('/projects'),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Some of projects I have worked on.",
     },
     {
       id: "writingsAction",
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
       keywords: "writing writings blog",
       section: "Navigation",
       perform: () => router.push('/writings'),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Wrote something crazy here.",
     },
     {
       id: "photosAction",
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }) {
       keywords: "photo photos picture pictures gallery",
       section: "Navigation",
       perform: () => router.push('/photos'),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Nice picture taken by me.",
     },
     {
       id: "scrollToTopAction",
@@ -67,16 +67,52 @@ function MyApp({ Component, pageProps }) {
       keywords: "scroll top",
       section: "Preferences",
       perform: () => window.scrollTo(0, 0),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Scroll to the top.",
     },
     {
       id: "scrollToBotAction",
       name: "Scroll to bottom",
       shortcut: ["s","b"],
-      keywords: "scroll top",
+      keywords: "scroll bottom",
       section: "Preferences",
       perform: () => window.scrollTo(0, document.body.scrollHeight),
-      subtitle: "Subtitles can help add more context.",
+      subtitle: "Scroll to the bottom.",
+    },
+    {
+      id: "facebookAction",
+      name: "Facebook",
+      shortcut: ["f","b"],
+      keywords: "facebook social media",
+      section: "Social media",
+      perform: () => window.open('https://www.facebook.com/yun.khngn/', '_blank'),
+      subtitle: "Visit my facebook account.",
+    },
+    {
+      id: "instagramAction",
+      name: "Instagram",
+      shortcut: ["i","g"],
+      keywords: "instagram social media",
+      section: "Social media",
+      perform: () => window.open('https://www.instagram.com/yun.khngn_', '_blank'),
+      subtitle: "Follow my instagram account.",
+    },
+    {
+      id: "githubAction",
+      name: "Github",
+      shortcut: ["g","h"],
+      keywords: "github social media",
+      section: "Social media",
+      perform: () => window.open('https://github.com/yunkhngn', '_blank'),
+      subtitle: "See my works and view the codes here.",
+    },
+    {
+      id: "behanceAction",
+      name: "Behance",
+      shortcut: ["b","e"],
+      keywords: "behance social media",
+      section: "Social media",
+      perform: () => window.open('https://www.behance.net/yunkhngn', '_blank'),
+      subtitle: "Looking for my design projects?.",
     },
   ];
   
@@ -126,6 +162,7 @@ function MyApp({ Component, pageProps }) {
             <Metatags description='null'/>
             <StyleReset/>
             <Component themeUse={themeUse.styles} theme={theme} {...pageProps} />
+            {/* <Footer themeUse={themeUse} theme={theme}/> */}
             <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
           </div>
           </KBarProvider>

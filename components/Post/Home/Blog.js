@@ -23,7 +23,7 @@ const Blog = ({theme,themeUse}) => {
         },
         {
             id: 4,
-            title: 'Learing Nextjs like a pro?',
+            title: 'Learning Nextjs like a pro?',
             date: '16/04/2022',
         },
         {
@@ -35,25 +35,26 @@ const Blog = ({theme,themeUse}) => {
     return (
         <div>
             <Title color={themeUse.primary} size="heading">Writings</Title>
-            <Para color={themeUse.secondary}>This is my writings, you can check it out below!</Para>
-            <Spacer theme={theme} length="100%"/>
+            <Para color={themeUse.secondary} >A collection of my (un)organized musings.</Para>
+            <Div m={{b:'1.7em'}}/>
+            <hr className={'hr'+theme}/>
             <Div>
                 {post.map(item => (
                     <div key={item.id}>
-                        <Link href='/writings'>
+                        <Link href='/projects'>
                             <a>
-                                <Div justify="space-between" d="flex">
-                                    <Para color={themeUse.secondary}><strong>{item.title}</strong></Para>
-                                    <Para color={themeUse.secondary}>{item.date}</Para>
+                                <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
+                                    <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.title}</strong></Para>
+                                    <hr className={'hr'+theme}/>
+                                    <Para margin="true" which="left" color={themeUse.secondary}>{item.date}</Para>
                                 </Div>
                             </a>
                         </Link>
-                        <Spacer theme={theme} length="100%"/>
                     </div>
                 ))}
             </Div>
-            <Link href="/writings"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my writings...</Div></a></Link>
-            <ElementSpace/>
+            <Link href="/writings"><a><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a></Link>
+            <ElementSpace space="12em"/>
         </div>
     );
 }

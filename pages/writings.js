@@ -1,6 +1,5 @@
 import {Template} from '../components/Template/'
-import {Intro,Blog, Project} from '../components/Post/'
-import {Footer} from '../components/Hooks/'
+import {Blog} from '../components/Post/'
 
 const description = {
     title: 'Writings - Khoa Nguyễn',
@@ -9,11 +8,8 @@ const description = {
 
 const writings = ({themeUse,theme}) => {
     return (
-        <Template description={description} height="100%">
-            <Intro themeUse={themeUse} theme={theme}/>
-            <Project themeUse={themeUse} theme={theme}/>
+        <Template description={description} height="100vh">
             <Blog themeUse={themeUse} theme={theme}/>
-            <Footer themeUse={themeUse} theme={theme}/>
         </Template>
     );
 }
