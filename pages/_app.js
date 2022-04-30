@@ -1,13 +1,15 @@
 import '../styles/globals.css'
 import '../styles/Bar.css'
 import '../styles/BarIcon.css'
-import { Bar } from '../components/Hooks/'
+import { Bar, CmdBar} from '../components/Hooks/'
 import {styletron} from '../styletron'
 import { Provider as StyletronProvider } from 'styletron-react'
 import {StyleReset} from 'atomize'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {Div} from 'atomize'
 import Metatags from '../components/Template/Metatags'
+import actions from '../Lib/Actions'
+import {KBarProvider} from 'kbar'
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light')
@@ -40,16 +42,25 @@ function MyApp({ Component, pageProps }) {
     },
   ]
   const [themeUse,setThemeUse] = useState(theme === 'light' ? themeProvider[0] : themeProvider[1])
+
   return (
     <StyletronProvider value={styletron}>
-      <Div bg={themeUse.styles.bg} w="100%">
-        <div className={'webkit selection'+theme}>
-          <Metatags description='null'/>
-          <StyleReset/>
-          <Component themeUse={themeUse.styles} theme={theme} {...pageProps} />
-          <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
-        </div>
-     </Div>
+      <KBarProvider
+      options={{
+        enableHistory: true,
+      }}
+      actions={actions}
+      >
+        <Div bg={themeUse.styles.bg} w="100%">
+          <div className={'webkit selection'+theme}>
+            <CmdBar theme={theme}/>
+            <Metatags description='null'/>
+            <StyleReset/>
+            <Component themeUse={themeUse.styles} theme={theme} {...pageProps} />
+            <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
+          </div>
+      </Div>
+      </KBarProvider>
     </StyletronProvider>
   )
 }
