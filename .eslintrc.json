@@ -2,7 +2,6 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "react/display-name": "off",
-    "react/no-unescaped-entities": 0,
-    "react-hooks/rules-of-hook": "off"
+    "react/no-unescaped-entities": 0
   }
 }
