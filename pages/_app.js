@@ -8,8 +8,10 @@ import {StyleReset} from 'atomize'
 import {useState} from 'react'
 import {Div} from 'atomize'
 import Metatags from '../components/Template/Metatags'
+import { AnimatedTags } from '../components/Template'
 import {KBarProvider} from 'kbar'
 import {useRouter} from 'next/router'
+import {AnimatePresence} from 'framer-motion'
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light')
@@ -161,7 +163,11 @@ function MyApp({ Component, pageProps }) {
             <CmdBar theme={theme}/>
             <Metatags description='null'/>
             <StyleReset/>
-            <Component themeUse={themeUse.styles} theme={theme} {...pageProps} />
+            <AnimatePresence exitBeforeEnter>
+              <AnimatedTags key={router.pathname}>
+                <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
+              </AnimatedTags>
+            </AnimatePresence>
             {/* <Footer themeUse={themeUse} theme={theme}/> */}
             <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
           </div>
