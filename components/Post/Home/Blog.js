@@ -1,35 +1,40 @@
-import {Spacer} from '../../Hooks'
 import {Title, Para} from '../../Template'
 import Link from 'next/link'
 import {Div} from 'atomize'
 import ElementSpace from '../ElementSpace'
 
 const Blog = ({theme,themeUse}) => {
+    //get data from api
     const post = [
         {
             id: 1,
             title: 'My first blog post in my year.',
             date: '12/04/2021',
+            url: '/writings/my-first-blog',
         },
         {
             id: 2,
             title: 'Coding a website seems to be easy.',
             date: '06/05/2021',
+            url: '/writings/coding-a-website',
         },
         {
             id: 3,
             title: 'Crush on you?',
             date: '07/12/2021',
+            url: '/writings/crush-on-you',
         },
         {
             id: 4,
             title: 'Learning Nextjs like a pro?',
             date: '16/04/2022',
+            url: '/writings/learning-nextjs-like-a-pro',
         },
         {
             id: 5,
             title: 'Reactjs or Nextjs?',
             date: '30/04/2022',
+            url: '/writings/reactjs-or-nextjs',
         },
     ]
     return (
@@ -41,7 +46,7 @@ const Blog = ({theme,themeUse}) => {
             <Div>
                 {post.map(item => (
                     <div key={item.id}>
-                        <Link href='/projects'>
+                        <Link href={item.url}>
                             <a>
                                 <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
                                     <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.title}</strong></Para>

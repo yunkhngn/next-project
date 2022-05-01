@@ -46,13 +46,7 @@ const BarNavigate = [
     name: "Writings",
     icon: "Mail",
     url: "/writings",
-    },
-    {
-    id: 4,
-    name: "Photos",
-    icon: "CameraSolid",
-    url: "/photos",
-    },  
+    }, 
 ]
   
 const openURL = (url) => {
