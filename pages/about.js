@@ -2,7 +2,7 @@ import {Template} from '../components/Template/'
 import {Intro} from '../components/Post/'
 
 const description = {
-    title: 'About - Khoa Nguyễn',
+    title: 'About Me - Khoa Nguyễn',
     url: 'https://www.khoanguyen.dev/about',
 }
 

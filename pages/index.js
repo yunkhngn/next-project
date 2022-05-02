@@ -3,7 +3,7 @@ import {Template} from '../components/Template/'
 import {Intro} from '../components/Post/'
 
 const description = {
-  title: 'Home - Khoa Nguyễn',
+  title: 'Home Page - Khoa Nguyễn',
   url: 'https://www.khoanguyen.dev',
 }
 
