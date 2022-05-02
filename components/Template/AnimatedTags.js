@@ -23,13 +23,13 @@ const transition = {
 
 const AnimatedTags = ({children}) => {
   return (
-    <motion.div
+    <motion.main
     variants={animation}
     initial="initial"
     animate="animate"
     exit="exit"
     transition={transition}
-    >{children}</motion.div>
+    >{children}</motion.main>
   )
 }
 

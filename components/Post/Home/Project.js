@@ -37,7 +37,7 @@ const Project = ({theme,themeUse}) => {
         },
     ]
     return (
-        <div>
+        <article>
             <Title color={themeUse.primary} size="heading">Projects</Title>
             <Para color={themeUse.secondary} >Incredible things built with React, Next.js, and TypeScript.</Para>
             <Div m={{b:'1.7em'}}/>
@@ -59,7 +59,7 @@ const Project = ({theme,themeUse}) => {
             </Div>
             <Link href="/projects"><a><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a></Link>
             <ElementSpace space="12em"/>
-        </div>
+        </article>
     );
 }
 

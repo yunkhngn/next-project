@@ -151,7 +151,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <StyletronProvider value={styletron}>
-        <Div bg={themeUse.styles.bg} w="100%">
         <KBarProvider
       options={{
         enableHistory: true,
@@ -168,11 +167,10 @@ function MyApp({ Component, pageProps }) {
                 <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
               </AnimatedTags>
             </AnimatePresence>
-            {/* <Footer themeUse={themeUse} theme={theme}/> */}
+            <Footer themeUse={themeUse.styles} theme={theme}/>
             <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
           </div>
           </KBarProvider>
-      </Div>
     </StyletronProvider>
   )
 }

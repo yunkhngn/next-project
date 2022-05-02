@@ -16,9 +16,11 @@ const Paragraph = ({children, color, margin, which}) => {
         return {}
     }
     return (
-        <Text m={marginText()} textWeight="450" textSize="paragraph" fontFamily='Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue' textColor={color}>
-        {children}
-    </Text>
+        <section>
+            <Text m={marginText()} textWeight="450" textSize="paragraph" fontFamily='Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue' textColor={color}>
+            {children}
+            </Text>
+        </section>
     );
 }
 

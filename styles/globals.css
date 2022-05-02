@@ -30,6 +30,16 @@ a {
   background-color: #febdc1;
   color: #161616;
 }
+
+.selectiondark{
+  background-color: #161616;
+  width: 100%;
+}
+.selectionlight{
+  background-color: #ffffff;
+  width: 100%;
+}
+
 hr{
   border:none;
   margin-top:1em;

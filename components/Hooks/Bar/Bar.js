@@ -61,7 +61,7 @@ const Bar = ({setTheme, theme, setThemeUse, themeProvider}) => {
     setThemeUse(theme === 'light' ? themeProvider[1] : themeProvider[0]);
   };
     return (
-        <div className={"Bar--container Bar--"+theme}>
+        <nav className={"Bar--container Bar--"+theme}>
             <div className="Bar">
                 <div className="Bar--section">
                 <Link href="/" passHref>
@@ -135,7 +135,7 @@ const Bar = ({setTheme, theme, setThemeUse, themeProvider}) => {
           />
         </div>
       </div>
-    </div>
+    </nav>
     );
 }
 

@@ -38,7 +38,7 @@ const Blog = ({theme,themeUse}) => {
         },
     ]
     return (
-        <div>
+        <article>
             <Title color={themeUse.primary} size="heading">Writings</Title>
             <Para color={themeUse.secondary} >A collection of my (un)organized musings.</Para>
             <Div m={{b:'1.7em'}}/>
@@ -60,7 +60,7 @@ const Blog = ({theme,themeUse}) => {
             </Div>
             <Link href="/writings"><a><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a></Link>
             <ElementSpace space="12em"/>
-        </div>
+        </article>
     );
 }
 

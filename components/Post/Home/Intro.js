@@ -4,7 +4,7 @@ import ElementSpace from '../ElementSpace';
 
 const Intro = ({theme,themeUse}) => {
     return (
-        <div>
+        <article>
             <Title color={themeUse.primary} size="display2">Khoa Nguyễn</Title>
             <Para color={themeUse.secondary}>Senior Designer/Developer</Para>
             <Spacer theme={theme} length="140px"/>
@@ -13,7 +13,7 @@ const Intro = ({theme,themeUse}) => {
             <SocialLink theme={theme}/>
             <Spacer theme={theme} length="80px"/>
             <ElementSpace/>
-        </div>
+        </article>
     );
 }
 
