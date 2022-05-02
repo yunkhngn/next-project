@@ -1,5 +1,4 @@
 const Title = ({children, color}) => {
-    console.log(color)
     return (
         <header>
             <h1 className={color === '#171717' ? "dark" : 'light'}>
