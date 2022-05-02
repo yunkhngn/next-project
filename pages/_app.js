@@ -2,19 +2,16 @@ import '../styles/globals.css'
 import '../styles/Bar.css'
 import '../styles/BarIcon.css'
 import dynamic from 'next/dynamic'
+import { Bar, CmdBar, Footer} from '../components/Hooks/'
 import {styletron} from '../styletron'
 import { Provider as StyletronProvider } from 'styletron-react'
 import {StyleReset} from 'atomize'
 import {useState} from 'react'
+import Metatags from '../components/Template/Metatags'
+import { AnimatedTags } from '../components/Template'
 import {KBarProvider} from 'kbar'
 import {useRouter} from 'next/router'
 import {AnimatePresence} from 'framer-motion'
-
-const Bar = dynamic(() => import('../components/Hooks/Bar/Bar'))
-const CmdBar = dynamic(() => import('../components/Hooks/CmdBar/CmdBar'))
-const Footer = dynamic(() => import('../components/Hooks/Footer/Footer'))
-const Metatags = dynamic(() => import('../components/Template/Metatags'))
-const AnimatedTags = dynamic(() => import('../components/Template/AnimatedTags'))
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light')

@@ -1,12 +1,9 @@
-import {Text} from 'atomize'
-
-const Title = ({children, color, size}) => {
+const Title = ({children, color}) => {
+    console.log(color)
     return (
         <header>
-            <h1>
-                <Text textWeight="550" fontFamily='Playfair Display' textSize={size} textColor={color}>
-                    {children}
-                </Text>
+            <h1 className={color === '#171717' ? "dark" : 'light'}>
+                {children}
             </h1>
         </header>
     );

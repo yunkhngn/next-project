@@ -54,3 +54,16 @@ hr{
 .hrdark{
   border-bottom: 2px dotted hsl(0 0% 20.5%);
 }
+
+h1{
+  font-size:40px !important;
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  line-height: 48px !important;
+}
+.dark{
+  color: #171717;
+}
+.light{
+  color: #ededed
+}

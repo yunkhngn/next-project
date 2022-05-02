@@ -1,4 +1,4 @@
-import {Template} from '../components/Template/'
+import {Template, Title} from '../components/Template/'
 import {Blog} from '../components/Post/'
 
 const description = {
@@ -9,6 +9,7 @@ const description = {
 const writings = ({themeUse,theme}) => {
     return (
         <Template description={description} height="100vh">
+            <Title color={themeUse.primary}>Writings</Title>
             <Blog themeUse={themeUse} theme={theme}/>
         </Template>
     );

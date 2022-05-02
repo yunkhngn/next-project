@@ -1,4 +1,4 @@
-import {Title, Para} from '../../Template'
+import {Para} from '../../Template'
 import Link from 'next/link'
 import {Div} from 'atomize'
 import ElementSpace from '../ElementSpace'
@@ -38,14 +38,13 @@ const Project = ({theme,themeUse}) => {
     ]
     return (
         <article>
-            <Title color={themeUse.primary} size="heading">Projects</Title>
             <Para color={themeUse.secondary} >Incredible things built with React, Next.js, and TypeScript.</Para>
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
             <Div>
                 {post.map(item => (
                     <div key={item.id}>
-                        <Link href={'/projects/'+item.url}>
+                        <Link href={'/projects'+item.url}>
                             <a>
                                 <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
                                     <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.title}</strong></Para>

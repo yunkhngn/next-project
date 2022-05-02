@@ -39,7 +39,6 @@ const Blog = ({theme,themeUse}) => {
     ]
     return (
         <article>
-            <Title color={themeUse.primary} size="heading">Writings</Title>
             <Para color={themeUse.secondary} >A collection of my (un)organized musings.</Para>
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
