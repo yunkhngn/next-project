@@ -1,5 +1,7 @@
 {
  "name": "Khoa Nguyen's Application",
+ "version": "1.0",
+ 
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
