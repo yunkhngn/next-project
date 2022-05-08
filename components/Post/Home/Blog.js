@@ -10,31 +10,31 @@ const Blog = ({theme,themeUse}) => {
             id: 1,
             title: 'My first blog post in my year.',
             date: '12/04/2021',
-            url: '/writings/my-first-blog',
+            url: '/writings/myfirstblog',
         },
         {
             id: 2,
             title: 'Coding a website seems to be easy.',
             date: '06/05/2021',
-            url: '/writings/coding-a-website',
+            url: '/writings/codingawebsite',
         },
         {
             id: 3,
             title: 'Crush on you?',
             date: '07/12/2021',
-            url: '/writings/crush-on-you',
+            url: '/writings/crushonyou',
         },
         {
             id: 4,
             title: 'Learning Nextjs like a pro?',
             date: '16/04/2022',
-            url: '/writings/learning-nextjs-like-a-pro',
+            url: '/writings/learningnextjslikeapro',
         },
         {
             id: 5,
             title: 'Reactjs or Nextjs?',
             date: '30/04/2022',
-            url: '/writings/reactjs-or-nextjs',
+            url: '/writings/reactjsornextjs',
         },
     ]
     return (
