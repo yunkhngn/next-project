@@ -1,14 +1,10 @@
 import {Template, Title} from '../components/Template/'
 import {Blog} from '../components/Post/'
-
-const description = {
-    title: 'Writings - Khoa Nguyễn',
-    url: 'https://www.khoanguyen.dev/writings',
-}
+import {desc} from '../lib'
 
 const writings = ({themeUse,theme}) => {
     return (
-        <Template description={description} height="100vh">
+        <Template description={desc.writings} height="100vh">
             <Title color={themeUse.primary}>Writings</Title>
             <Blog themeUse={themeUse} theme={theme}/>
         </Template>
