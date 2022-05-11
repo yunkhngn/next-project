@@ -12,7 +12,7 @@ const Project = ({theme,themeUse, prj}) => {
             <Div>
                 {prj.map(item => (
                     <div key={item.id}>
-                        <a target="_blank" href={item.attributes.Link}>
+                        <a target="_blank" rel="noreferrer" href={item.attributes.Link}>
                             <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
                                 <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.attributes.Title}</strong></Para>
                                 <hr className={'hr'+theme}/>
@@ -22,7 +22,7 @@ const Project = ({theme,themeUse, prj}) => {
                     </div>
                 ))}
             </Div>
-            <a target="_blank" href="https://github.com/yunkhngn"><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/yunkhngn"><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a>
             <ElementSpace space="12em"/>
         </article>
     );
