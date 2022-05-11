@@ -11,7 +11,7 @@ const projects = ({themeUse,theme,prj}) => {
     );
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
     const URL = require('../lib/url')
     const res = await fetch(`${URL.url}projects/`);
     const data = await res.json();

@@ -11,7 +11,7 @@ const writings = ({content,themeUse,theme}) => {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const URL = require('../lib/url')
     const res = await fetch(`${URL.url}writings`);
     const data = await res.json();

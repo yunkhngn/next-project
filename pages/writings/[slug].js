@@ -45,30 +45,13 @@ const Writings = ({content, themeUse, theme, slug}) => {
 
 export default Writings;
 
-export async function getStaticProps({params}) {
-    const { slug } = params
+export async function getServerSideProps(context) {
+    const { slug } = context.query;
     const URL = require('../../lib/url')
     const res = await fetch(`${URL.url}writings?slug=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {
         props: {content, slug},
-    }
-}
-
-export async function getStaticPaths() {
-    const URL = require('../../lib/url')
-    const res = await fetch(`${URL.url}writings`);
-    const data = await res.json();
-    const paths = data.data.map(({attributes}) => {
-        return {
-            params: {
-                slug: attributes.slug,
-            }
-        }
-    })
-    return {
-        paths,
-        fallback: false
     }
 }
