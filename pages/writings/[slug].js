@@ -23,11 +23,12 @@ const Writings = ({content, themeUse, theme, slug}) => {
     else {
     return (
         <Template description={description} height="100%">
+            <div className="essay">
             <Title color={themeUse.primary}>{content.Title}</Title>
             <Para color={themeUse.secondary}>Date modified:  {content.Date} | {content.Subtitle} </Para>
             <hr className={'hr'+theme}/>
             <Para color={themeUse.secondary}>
-            <text className="essay">{content.Content}</text>
+            {content.Content}
             <br/>
             <br/>
             <i>Sign up for my newsletter to get the latest updates.</i>
@@ -36,6 +37,7 @@ const Writings = ({content, themeUse, theme, slug}) => {
             </Para>
             <br/>
             <Link href="/writings"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>Go back...</Div></a></Link>
+            </div>
         </Template>
     );
     }
@@ -43,13 +45,30 @@ const Writings = ({content, themeUse, theme, slug}) => {
 
 export default Writings;
 
-export async function getServerSideProps(context) {
-    const { slug } = context.query
+export async function getStaticProps({params}) {
+    const { slug } = params
     const URL = require('../../lib/url')
     const res = await fetch(`${URL.url}writings?slug=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {
         props: {content, slug},
+    }
+}
+
+export async function getStaticPaths() {
+    const URL = require('../../lib/url')
+    const res = await fetch(`${URL.url}writings`);
+    const data = await res.json();
+    const paths = data.data.map(({attributes}) => {
+        return {
+            params: {
+                slug: attributes.slug,
+            }
+        }
+    })
+    return {
+        paths,
+        fallback: false
     }
 }
