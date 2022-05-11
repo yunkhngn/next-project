@@ -45,7 +45,8 @@ export default Writings;
 
 export async function getServerSideProps(context) {
     const { slug } = context.query
-    const res = await fetch(`https://khoanguyen-backend.herokuapp.com/api/writings?slug=${slug}`);
+    const URL = require('../../lib/url')
+    const res = await fetch(`${URL.url}writings?slug=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {

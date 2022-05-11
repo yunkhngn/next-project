@@ -13,7 +13,8 @@ const writings = ({content,themeUse,theme}) => {
 
 export async function getServerSideProps() {
     console.log("Connected")
-    const res = await fetch(`https://khoanguyen-backend.herokuapp.com/api/writings`);
+    const URL = require('../lib/url')
+    const res = await fetch(`${URL.url}writings`);
     const data = await res.json();
     const content = data.data;
     return {
