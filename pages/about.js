@@ -4,7 +4,7 @@ import {desc} from '../lib'
 
 const about = ({themeUse,theme}) => {
     return (
-        <Template description={desc.about} height="100vh">
+        <Template description={desc.about} height="100%">
             <Title color={themeUse.primary}>About me</Title>
             <Intro themeUse={themeUse} theme={theme}/>
         </Template>

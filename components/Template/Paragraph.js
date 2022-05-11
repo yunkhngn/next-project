@@ -1,6 +1,6 @@
 import {Text} from 'atomize'
 
-const Paragraph = ({children, color, margin, which}) => {
+const Paragraph = ({d, children, color, margin, which}) => {
     const marginText = () => {
         if (margin){
             if (which === 'left'){
@@ -11,13 +11,15 @@ const Paragraph = ({children, color, margin, which}) => {
                 return {b:'1em'}
             }  else if (which === 'top'){
                 return {t:'1em'}
+            } else if (which === 'both'){
+                return {r:'1em',l:'1em'}
             }
         }
         return {}
     }
     return (
         <section>
-            <Text m={marginText()} textWeight="450" textSize="paragraph" fontFamily='Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue' textColor={color}>
+            <Text d={d} m={marginText()} textWeight="450" textSize="paragraph" fontFamily='Magnat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue' textColor={color}>
             {children}
             </Text>
         </section>

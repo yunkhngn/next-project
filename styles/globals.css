@@ -71,3 +71,7 @@ h1{
 .light{
   color: #ededed
 }
+.essay{
+  word-break: normal;
+  white-space: pre-wrap
+}

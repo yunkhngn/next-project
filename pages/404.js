@@ -11,7 +11,7 @@ const description = {
 
 const Custom404 = ({themeUse, theme}) =>{
     return (
-        <Template description={description} height="100vh">
+        <Template description={description} height="100%">
             <Title color={themeUse.primary} size="display1">Oops!</Title>
             <Para color={themeUse.secondary}>We can't seem to find the page you are looking for!<br/>Please go back to the homepage! <br/> <strong>Error code: 404</strong></Para>
             <Spacer theme={theme} length="80px"/>

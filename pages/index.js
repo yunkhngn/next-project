@@ -5,7 +5,7 @@ import {desc} from '../lib'
 
 export default function Home({theme, themeUse}) {
   return (
-    <Template description={desc.home} height="100vh">
+    <Template description={desc.home} height="100%">
       <Title color={themeUse.primary}>Khoa Nguyễn</Title>
       <Intro themeUse={themeUse} theme={theme}/>
     </Template>
