@@ -2,7 +2,6 @@ import {SocialLink, Spacer} from '../../Hooks'
 import {Para} from '../../Template'
 import ElementSpace from '../ElementSpace';
 import ReactMarkdown from 'react-markdown'
-import {Div} from 'atomize'
 
 const Intro = ({theme,themeUse, content}) => {
     return (
@@ -14,6 +13,7 @@ const Intro = ({theme,themeUse, content}) => {
             <Spacer theme={theme} length="80px"/>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
             <ElementSpace/>
+            &nbsp;
         </article>
     );
 }
