@@ -54,15 +54,6 @@ function MyApp({ Component, pageProps }) {
       subtitle: "Wrote something crazy here.",
     },
     {
-      id: "photosAction",
-      name: "Photos",
-      shortcut: ["p","t"],
-      keywords: "photo photos picture pictures gallery",
-      section: "Navigation",
-      perform: () => router.push('/photos'),
-      subtitle: "Nice picture taken by me.",
-    },
-    {
       id: "scrollToTopAction",
       name: "Scroll to top",
       shortcut: ["s","t"],

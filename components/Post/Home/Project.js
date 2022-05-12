@@ -22,7 +22,6 @@ const Project = ({theme,themeUse, prj}) => {
                 ))}
             </Div>
             <a target="_blank" rel="noreferrer" href="https://github.com/yunkhngn"><Div m={{t:"1em"}} textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>View all my project...</Div></a>
-            <ElementSpace space="12em"/>
         </article>
     );
 }

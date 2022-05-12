@@ -72,7 +72,7 @@ export async function getStaticProps({params}){
     const content = data.data[0].attributes;
     return {
         props: {content, slug},
-        revalidate: 10, 
+        revalidate: 30, 
     }
 }
 
