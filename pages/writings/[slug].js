@@ -2,6 +2,7 @@ import {Template, Title, Para} from '../../components/Template'
 import Link from 'next/link';
 import {Div} from 'atomize';
 import ElementSpace from '../../components/Post/ElementSpace';
+import ReactMarkdown from 'react-markdown'
 
 const Writings = ({content, themeUse, theme, slug}) => {
     const description = {
@@ -29,7 +30,7 @@ const Writings = ({content, themeUse, theme, slug}) => {
             <Para color={themeUse.secondary}>Date modified:  {content.Date} | {content.Subtitle} </Para>
             <hr className={'hr'+theme}/>
             <Para color={themeUse.secondary}>
-            {content.Content}
+            <ReactMarkdown>{content.Content}</ReactMarkdown>
             <br/>
             <br/>
             <i>Sign up for my newsletter to get the latest updates.</i>
@@ -71,7 +72,7 @@ export async function getStaticProps({params}){
     const content = data.data[0].attributes;
     return {
         props: {content, slug},
-        revalidate: 60, 
+        revalidate: 10, 
     }
 }
 

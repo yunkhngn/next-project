@@ -16,6 +16,7 @@
     "next": "12.1.5",
     "react": "^18.1.0",
     "react-dom": "18.1.0",
+    "react-markdown": "^8.0.3",
     "react-transition-group": "^4.4.2",
     "styletron-engine-atomic": "^1.4.8",
     "styletron-react": "^6.0.2"

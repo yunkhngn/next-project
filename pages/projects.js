@@ -18,7 +18,7 @@ export async function getStaticProps(){
     const prj = data.data;
     return {
         props: {prj},
-        revalidate: 60,
+        revalidate: 10,
     }
 }
 
