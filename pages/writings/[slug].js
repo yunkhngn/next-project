@@ -1,12 +1,14 @@
 import {Template, Title, Para} from '../../components/Template'
 import Link from 'next/link';
 import {Div} from 'atomize';
+import ElementSpace from '../../components/Post/ElementSpace';
 
 const Writings = ({content, themeUse, theme, slug}) => {
     const description = {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
     }
+    console.log(content);
     if(content.slug !== slug) {
         return (
             <Template description={description} height="100%">
@@ -38,20 +40,39 @@ const Writings = ({content, themeUse, theme, slug}) => {
             <br/>
             <Link href="/writings"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>Go back...</Div></a></Link>
             </div>
+            <ElementSpace/>
+            <br/>
         </Template>
     );
     }
 }
 
-export default Writings;
+export async function getStaticPaths() {
+    const URL = require('../../lib/url')
+    const res = await fetch(`${URL.url}writings`);
+    const data = await res.json();
+    const paths = data.data.map(({attributes}) => {
+        return {
+            params: {
+                slug: attributes.slug,
+            }
+        }
+    })
+    return {
+        paths,
+        fallback: false
+    }
+} 
 
-export async function getServerSideProps(context) {
-    const { slug } = context.query;
+export async function getStaticProps({params}){
+    const { slug } = params;
     const URL = require('../../lib/url')
     const res = await fetch(`${URL.url}writings?filters\[slug\]=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {
-        props: {content, slug},
+        props: {content, slug}
     }
 }
+
+export default Writings;
