@@ -12,7 +12,7 @@ import { AnimatedTags } from '../components/Template'
 import {KBarProvider} from 'kbar'
 import {useRouter} from 'next/router'
 import {AnimatePresence} from 'framer-motion'
-
+import {Div} from 'atomize'
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light')
   const router = useRouter()  
@@ -110,7 +110,6 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const [themeUse,setThemeUse] = useState(theme === 'light' ? themeProvider[0] : themeProvider[1])
-
   return (
     <StyletronProvider value={styletron}>
         <KBarProvider
@@ -126,7 +125,9 @@ function MyApp({ Component, pageProps }) {
             <StyleReset/>
             <AnimatePresence exitBeforeEnter>
               <AnimatedTags key={router.pathname}>
-                <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
+                <Div textColor={themeUse.styles.secondary}>
+                  <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
+                </Div>
               </AnimatedTags>
             </AnimatePresence>
             <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
