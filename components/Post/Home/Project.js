@@ -1,5 +1,4 @@
 import {Para} from '../../Template'
-import Link from 'next/link'
 import {Div} from 'atomize'
 import ElementSpace from '../ElementSpace'
 
