@@ -11,16 +11,6 @@ const writings = ({content,themeUse,theme}) => {
     );
 }
 
-// export async function getServerSideProps() {
-//     const URL = require('../lib/url')
-//     const res = await fetch(`${URL.url}writings`);
-//     const data = await res.json();
-//     const content = data.data;
-//     return {
-//         props: {content},
-//     }
-// }
-
 export async function getStaticProps() {
     const URL = require('../lib/url')
     const res = await fetch(`${URL.url}writings`);
@@ -28,6 +18,7 @@ export async function getStaticProps() {
     const content = data.data;
     return {
         props: {content},
+        revalidate: 60, 
     }
 }
 

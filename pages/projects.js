@@ -11,16 +11,6 @@ const projects = ({themeUse,theme,prj}) => {
     );
 }
 
-// export async function getServerSideProps(){
-//     const URL = require('../lib/url')
-//     const res = await fetch(`${URL.url}projects/`);
-//     const data = await res.json();
-//     const prj = data.data;
-//     return {
-//         props: {prj},
-//     }
-// }
-
 export async function getStaticProps(){
     const URL = require('../lib/url')
     const res = await fetch(`${URL.url}projects/`);
@@ -28,6 +18,7 @@ export async function getStaticProps(){
     const prj = data.data;
     return {
         props: {prj},
+        revalidate: 60,
     }
 }
 

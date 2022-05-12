@@ -8,7 +8,6 @@ const Writings = ({content, themeUse, theme, slug}) => {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
     }
-    console.log(content);
     if(content.slug !== slug) {
         return (
             <Template description={description} height="100%">
@@ -60,18 +59,19 @@ export async function getStaticPaths() {
     })
     return {
         paths,
-        fallback: false
+        fallback: 'blocking'
     }
 } 
 
-export async function getStaticProps({params}){
+export async function getStaticProps({params}){ 
     const { slug } = params;
     const URL = require('../../lib/url')
     const res = await fetch(`${URL.url}writings?filters\[slug\]=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {
-        props: {content, slug}
+        props: {content, slug},
+        revalidate: 60, 
     }
 }
 
