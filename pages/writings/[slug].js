@@ -48,7 +48,7 @@ export default Writings;
 export async function getServerSideProps(context) {
     const { slug } = context.query;
     const URL = require('../../lib/url')
-    const res = await fetch(`${URL.url}writings?slug=${slug}`);
+    const res = await fetch(`${URL.url}writings?filters\[slug\]=${slug}`);
     const data = await res.json();
     const content = data.data[0].attributes;
     return {
