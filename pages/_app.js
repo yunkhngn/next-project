@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import '../styles/Bar.css'
 import '../styles/BarIcon.css'
 import { themeProvider } from '../lib'
-import { Bar, CmdBar, Footer} from '../components/Hooks'
+import { Bar, CmdBar} from '../components/Hooks'
 import {styletron} from '../styletron'
 import { Provider as StyletronProvider } from 'styletron-react'
 import {StyleReset} from 'atomize'
@@ -138,7 +138,6 @@ function MyApp({ Component, pageProps }) {
                 <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
               </AnimatedTags>
             </AnimatePresence>
-            <Footer themeUse={themeUse.styles} theme={theme}/>
             <Bar theme={theme} setTheme={setTheme} setThemeUse={setThemeUse} themeProvider={themeProvider}/>
           </div>
           </KBarProvider>
