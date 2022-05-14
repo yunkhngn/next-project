@@ -33,7 +33,7 @@ const SocialLink = () => {
       <footer>
         <Div m={{t:'1em'}}>
             {social.map(item => (
-                <SocialIcon key={item.id} icon={item.icon} link={item.link}/>
+                <SocialIcon key={item.id} icon={item.icon} link={item.link} />
             ))}
         </Div>
       </footer>
