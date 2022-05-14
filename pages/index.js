@@ -42,7 +42,7 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
           bg="transparent"
           rounded="lg"
           border="1px solid"
-          borderColor={theme === 'light' ? "#858585" : "#7e7e7e"}
+          borderColor="light"
           m={{ r: "1em" }}
           onClick={Loved}
           disabled={isLove}
@@ -55,7 +55,7 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
           bg="transparent"
           rounded="lg"
           border="1px solid"
-          borderColor={theme === 'light' ? "#858585" : "#7e7e7e"}
+          borderColor="light"
           m={{ r: "1em" }}
           onClick={() => window.open("https://m.me/yun.khngn", "_blank")}
         >
@@ -65,11 +65,11 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
             h="2.5rem"
             p={{ x: "1rem" }}
             textSize="body"
-            textColor={theme === 'light' ? "#858585" : "#7e7e7e"}
+            textColor={theme === 'light' ? "#858585" : "#EDEDED"}
             bg="transparent"
             hoverBg={theme === 'light' ? "gray200": null}
             border="1px solid"
-            borderColor={theme === 'light' ? "#858585" : "#7e7e7e"}
+            borderColor="light"
             m={{ r: "1em" }}      
             onClick={() => window.open("https://drive.google.com/file/d/16TkugAV3TGyYNBGO4eNNe9fs2aPj3Llh/view?usp=sharing")}
         >Download CV</Button>
@@ -83,7 +83,7 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
           m={{ r: "1em" }}
           onClick={() => alert("Chưa code cái này")}
         >
-          <Icon name="SettingsSolid" size="20px" color={theme === 'light' ? "#858585" : "#7e7e7e"} />
+          <Icon name="SettingsSolid" size="20px" color={theme === 'light' ? "#858585" : "#EDEDED"} />
         </Button>
       </Div>
     </Template>
