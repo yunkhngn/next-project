@@ -14,7 +14,7 @@ const Blog = ({data,theme,themeUse}) => {
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
             <Div>
-                {
+                {data.length === 0 ? <Para color={themeUse.secondary} >No blog posted yet.</Para> :
                     data.map((item) => {
                         return (
                             <Link href={'/writings/'+item.attributes.slug} key={item.id}>
