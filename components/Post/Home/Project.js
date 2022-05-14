@@ -13,7 +13,7 @@ const Project = ({theme,themeUse, prj}) => {
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
             <Div>
-                { prj.length === 0 ? <Para color={themeUse.secondary} >No projects posted yet.</Para> :
+                { prj.length === 0 ? <Para color={themeUse.secondary} >No project posted yet.</Para> :
                 prj.map(item => (
                     <div key={item.id}>
                         <a target="_blank" rel="noreferrer" href={item.attributes.Link}>
