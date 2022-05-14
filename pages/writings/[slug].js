@@ -30,17 +30,16 @@ const Writings = ({content, themeUse, theme, slug}) => {
     else {
     return (
         <Template description={description} height="100%">
-            <div className="essay">
             <Title color={themeUse.primary}>{content.Title}</Title>
-            <Para color={themeUse.secondary}><strong>Date modified:</strong> {dateFormer(content.updatedAt)} | <strong>Subtitle:</strong> {content.Subtitle} </Para>
+            <div className="essay">
+            <Para margin="true" which="top" color={themeUse.secondary}><strong>Date modified:</strong> {dateFormer(content.updatedAt)}</Para>
+            <Para color={themeUse.secondary}><strong>Subtitle:</strong> {content.Subtitle} </Para>
             <hr className={'hr'+theme}/>
-            <Para color={themeUse.secondary}>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
             <br/>
             <i>Sign up for my newsletter to get the latest updates.</i>
             <br/>
             Khoa Nguyen
-            </Para>
             <br/>
             <Link href="/writings"><a><Div textColor={themeUse.secondary} hoverTextColor={themeUse.hover} transition>Go back...</Div></a></Link>
             </div>

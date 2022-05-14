@@ -10,7 +10,7 @@ const Paragraph = ({d, children, color, margin, which}) => {
             } else if (which === 'bottom'){
                 return {b:'1em'}
             }  else if (which === 'top'){
-                return {t:'1em'}
+                return {t:'0.7em'}
             } else if (which === 'both'){
                 return {r:'1em',l:'1em'}
             }

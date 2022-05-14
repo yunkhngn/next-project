@@ -16,6 +16,7 @@ export async function getStaticProps() {
     const res = await fetch(`${URL.url}writings`);
     const data = await res.json();
     const content = data.data;
+    content.reverse();
     return {
         props: {content},
         revalidate: 30, 
