@@ -39,11 +39,9 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
         <Button
           h="2.5rem"
           w="2.5rem"
-          bg="transparent"
+          bg={theme === 'light' ? "danger400" : "danger200"}
           rounded="lg"
-          border="1px solid"
-          borderColor="light"
-          hoverBg="danger400"
+          hoverBg={theme === 'light' ? "danger200" : "danger400"}
           hoverBorderColor="transparent"
           m={{ r: "0.5em" }}
           onClick={Loved}
