@@ -37,7 +37,6 @@ const Writings = ({content, themeUse, theme, slug}) => {
             <Para color={themeUse.secondary}>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
             <br/>
-            <br/>
             <i>Sign up for my newsletter to get the latest updates.</i>
             <br/>
             Khoa Nguyen
