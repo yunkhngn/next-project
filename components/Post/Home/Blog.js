@@ -23,7 +23,7 @@ const Blog = ({data,theme,themeUse}) => {
                                             <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.attributes.Title}</strong></Para>
                                             <Para d={{xs:"none",md:"flex"}} margin="true" which="right" color={themeUse.secondary}>{item.attributes.Subtitle}</Para>
                                             <hr className={'hr'+theme}/>
-                                            <Para margin="true" which="left" color={themeUse.secondary}>{dateFormer(item.attributes.Date)}</Para>
+                                            <Para margin="true" which="left" color={themeUse.secondary}>{dateFormer(item.attributes.updatedAt)}</Para>
                                         </Div>
                                 </a>
                             </Link>

@@ -9,6 +9,11 @@ const Writings = ({content, themeUse, theme, slug}) => {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
     }
+    const dateFormer = (date) =>{
+        let dateArr = date.split('T')[0].split('-')
+        let timeArr = date.split('T')[1].split(':')
+        return `${timeArr[0]}:${timeArr[1]} on ${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`
+    }
     if(content.slug !== slug) {
         return (
             <Template description={description} height="100%">
@@ -27,7 +32,7 @@ const Writings = ({content, themeUse, theme, slug}) => {
         <Template description={description} height="100%">
             <div className="essay">
             <Title color={themeUse.primary}>{content.Title}</Title>
-            <Para color={themeUse.secondary}>Date modified:  {content.Date} | {content.Subtitle} </Para>
+            <Para color={themeUse.secondary}><strong>Date modified:</strong> {dateFormer(content.updatedAt)} | <strong>Subtitle:</strong> {content.Subtitle} </Para>
             <hr className={'hr'+theme}/>
             <Para color={themeUse.secondary}>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
