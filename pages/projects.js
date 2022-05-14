@@ -16,7 +16,6 @@ export async function getStaticProps(){
     const res = await fetch(`${URL.url}projects/`);
     const data = await res.json();
     const prj = data.data;
-    prj.reverse();
     return {
         props: {prj},
         revalidate: 30,
