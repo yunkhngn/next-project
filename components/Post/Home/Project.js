@@ -13,7 +13,8 @@ const Project = ({theme,themeUse, prj}) => {
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
             <Div>
-                {prj.map(item => (
+                { prj.length === 0 ? <Para color={themeUse.secondary} >No projects posted yet.</Para> :
+                prj.map(item => (
                     <div key={item.id}>
                         <a target="_blank" rel="noreferrer" href={item.attributes.Link}>
                             <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
