@@ -43,11 +43,23 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
           rounded="lg"
           hoverBg={theme === 'light' ? "danger200" : "danger400"}
           hoverBorderColor="transparent"
-          m={{ r: "0.5em" }}
+          m={{ r: "1em" }}
           onClick={Loved}
           disabled={isLove}
         >
           <Icon name="HeartSolid" size="20px" color={theme === 'light' ? "danger700" : "danger600"} />
+        </Button>
+        <Button
+          h="2.5rem"
+          w="2.5rem"
+          bg={theme === 'light' ? "success400" : "success200"}
+          rounded="lg"
+          hoverBg={theme === 'light' ? "success200" : "success400"}
+          hoverBorderColor="transparent"
+          m={{ r: "1em" }}
+          onClick={() => window.open("https://m.me/yun.khngn", "_blank")}
+        >
+          <Icon name="MessageSolid" size="20px" color={theme === 'light' ? "success700" : "success600"} />
         </Button>
         <Button
             h="2.5rem"
@@ -58,10 +70,22 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
             hoverBg={theme === 'light' ? "gray200": null}
             border="1px solid"
             borderColor="light"
-            m={{ r: "0.5rem" }}      
-            transition
+            m={{ r: "1em" }}      
             onClick={() => window.open("https://drive.google.com/file/d/16TkugAV3TGyYNBGO4eNNe9fs2aPj3Llh/view?usp=sharing")}
         >Download CV</Button>
+      <Button
+          h="2.5rem"
+          w="2.5rem"
+          textColor={theme === 'light' ? 'dark' : 'light'}
+          bg="transparent"
+          hoverBg={theme === 'light' ? "gray200": null}
+          border="1px solid"
+          borderColor="light"
+          m={{ r: "1em" }}
+          onClick={() => alert("Chưa code cái này")}
+        >
+          <Icon name="SettingsSolid" size="20px" color={theme === 'light' ? 'dark' : 'light'} />
+        </Button>
       </Div>
     </Template>
   )
