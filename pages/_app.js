@@ -110,6 +110,7 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const [themeUse,setThemeUse] = useState(theme === 'light' ? themeProvider[0] : themeProvider[1])
+  const [isLove, setIsLove] = useState(false)
   return (
     <StyletronProvider value={styletron}>
         <KBarProvider
@@ -126,7 +127,7 @@ function MyApp({ Component, pageProps }) {
             <AnimatePresence exitBeforeEnter>
               <AnimatedTags key={router.pathname}>
                 <Div textColor={themeUse.styles.secondary}>
-                  <Component themeUse={themeUse.styles} theme={theme} {...pageProps}/>
+                  <Component isLove={isLove} setIsLove={setIsLove} themeUse={themeUse.styles} theme={theme} {...pageProps}/>
                 </Div>
               </AnimatedTags>
             </AnimatePresence>

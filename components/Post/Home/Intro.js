@@ -12,8 +12,6 @@ const Intro = ({theme,themeUse, content}) => {
             <SocialLink theme={theme}/>
             <Spacer theme={theme} length="80px"/>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
-            <ElementSpace/>
-            &nbsp;
         </article>
     );
 }
