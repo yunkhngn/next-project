@@ -4,6 +4,10 @@ import {Div} from 'atomize'
 import ElementSpace from '../ElementSpace'
 
 const Blog = ({data,theme,themeUse}) => {
+    const dateFormer = (date) =>{
+        let dateArr = date.split('T')[0].split('-')
+        return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`
+    }
     return (
         <article>
             <Para color={themeUse.secondary} >A collection of my (un)organized musings.</Para>
@@ -19,7 +23,7 @@ const Blog = ({data,theme,themeUse}) => {
                                             <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.attributes.Title}</strong></Para>
                                             <Para d={{xs:"none",md:"flex"}} margin="true" which="right" color={themeUse.secondary}>{item.attributes.Subtitle}</Para>
                                             <hr className={'hr'+theme}/>
-                                            <Para margin="true" which="left" color={themeUse.secondary}>{item.attributes.Date}</Para>
+                                            <Para margin="true" which="left" color={themeUse.secondary}>{dateFormer(item.attributes.Date)}</Para>
                                         </Div>
                                 </a>
                             </Link>

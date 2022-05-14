@@ -3,6 +3,10 @@ import {Div} from 'atomize'
 import ElementSpace from '../ElementSpace'
 
 const Project = ({theme,themeUse, prj}) => {
+    const dateFormer = (date) =>{
+        let dateArr = date.split('T')[0].split('-')
+        return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`
+    }
     return (
         <article>
             <Para color={themeUse.secondary} >Incredible things built with React, Next.js, and TypeScript.</Para>
@@ -15,7 +19,7 @@ const Project = ({theme,themeUse, prj}) => {
                             <Div justify="space-between" align="center" d="flex" hoverBg={theme === 'light' ? "gray200" : '#222222'} rounded='12px' p="16px" transition m={{r:"-16px", l:"-16px"}}>
                                 <Para margin="true" which="right" color={theme === 'light' ? '#171717' : "#ededed"}><strong>{item.attributes.Title}</strong></Para>
                                 <hr className={'hr'+theme}/>
-                                <Para margin="true" which="left" color={themeUse.secondary}>{item.attributes.Date}</Para>
+                                <Para margin="true" which="left" color={themeUse.secondary}>{dateFormer(item.attributes.Date)}</Para>
                             </Div>
                         </a>
                     </div>
