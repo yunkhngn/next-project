@@ -22,12 +22,12 @@ a {
 }
 
 .selectionlight ::selection {
-  background-color: #febdc1;
+  background-color: #ff9a9e;
   color: #ffffff;
 }
 
 .selectiondark ::selection {
-  background-color: #febdc1;
+  background-color: #ff9a9e;
   color: #161616;
 }
 
