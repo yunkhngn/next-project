@@ -3,7 +3,6 @@ import {Blog} from '../components/Post/'
 import {desc} from '../lib'
 
 const writings = ({content,themeUse,theme}) => {
-    console.log(content)
     return (
         <Template description={desc.writings} height="100%">
             <Title color={themeUse.primary}>Writings</Title>
