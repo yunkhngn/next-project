@@ -8,7 +8,7 @@ const Project = ({theme,themeUse, prj}) => {
     }
     return (
         <article>
-            <Para color={themeUse.secondary} >Incredible things built with React, Next.js, and TypeScript.</Para>
+            <Para color={themeUse.secondary} >Incredible things built with React, Next.js, and Typescript.</Para>
             <Div m={{b:'1.7em'}}/>
             <hr className={'hr'+theme}/>
             <Div>

@@ -16,6 +16,9 @@ export async function getStaticProps() {
     const res = await fetch(`${URL.url}writings`);
     const data = await res.json();
     const content = data.data;
+    content.sort((a,b) => {
+        return b.id - a.id
+    })
     return {
         props: {content},
         revalidate: 30, 

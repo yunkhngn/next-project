@@ -1,10 +1,9 @@
 //this is the main page
 import {Template, Title} from '../components/Template/'
 import {Intro} from '../components/Post/'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {desc} from '../lib'
 import {Button, Div, Icon} from 'atomize'
-import {Para} from '../components/Template/'
 
 export default function Home({theme, themeUse, content, counter, isLove, setIsLove}) {
   const [love, setLove] = useState(Number(counter.LoveCount))
@@ -28,63 +27,38 @@ export default function Home({theme, themeUse, content, counter, isLove, setIsLo
     }
     PUT()
   }
+  useEffect(() => {
+    if(isLove === false){
+      Loved()
+    }
+  }, [])
   return (
     <Template description={desc.home} height="100%">
       <Title color={themeUse.primary}>Khoa Nguyễn</Title>
-      <Intro content={content.attributes} themeUse={themeUse} theme={theme}/>
-      <Para margin="true" which="bottom" theme={themeUse}>Love counts: {love}
-      <br/><i>Data will be delayed for a while.</i>
-      </Para>
+      <Intro content={content.attributes} themeUse={themeUse} love={love} theme={theme}/>
       <Div d="flex">
         <Button
-          h="2.5rem"
-          w="2.5rem"
-          bg="transparent"
-          rounded="lg"
-          border="1px solid"
-          borderColor="light"
-          m={{ r: "1em" }}
-          onClick={Loved}
-          disabled={isLove}
-        >
-          <Icon name="HeartSolid" size="20px" color={theme === 'light' ? "danger700" : "danger600"} />
-        </Button>
-        <Button
-          h="2.5rem"
-          w="2.5rem"
-          bg="transparent"
-          rounded="lg"
-          border="1px solid"
-          borderColor="light"
-          m={{ r: "1em" }}
-          onClick={() => window.open("https://m.me/yun.khngn", "_blank")}
-        >
-          <Icon name="MessageSolid" size="20px" color={theme === 'light' ? "success700" : "success600"} />
-        </Button>
-        <Button
-            h="2.5rem"
-            p={{ x: "1rem" }}
-            textSize="body"
-            textColor={theme === 'light' ? "#858585" : "#EDEDED"}
-            bg="transparent"
-            hoverBg={theme === 'light' ? "gray200": null}
-            border="1px solid"
-            borderColor="light"
-            m={{ r: "1em" }}      
-            onClick={() => window.open("https://drive.google.com/file/d/16TkugAV3TGyYNBGO4eNNe9fs2aPj3Llh/view?usp=sharing")}
+        h="2.5rem"
+        p={{ x: "1rem" }}
+        textSize="body"
+        textColor={theme === 'light' ? "#858585" : "#EDEDED"}
+        bg="transparent"
+        border="1px solid"
+        borderColor="light"
+        onClick={() => window.open("https://drive.google.com/file/d/16TkugAV3TGyYNBGO4eNNe9fs2aPj3Llh/view?usp=sharing")}
         >Download CV</Button>
-      <Button
-          h="2.5rem"
-          w="2.5rem"
-          bg="transparent"
-          hoverBg={theme === 'light' ? "gray200": null}
-          border="1px solid"
-          borderColor="light"
-          m={{ r: "1em" }}
-          onClick={() => alert("Chưa code cái này")}
-        >
-          <Icon name="SettingsSolid" size="20px" color={theme === 'light' ? "#858585" : "#EDEDED"} />
-        </Button>
+        <Button
+        h="2.5rem"
+        w="2.5rem"
+        textSize="body"
+        textColor={theme === 'light' ? "#858585" : "#EDEDED"}
+        bg="transparent"
+        border="1px solid"
+        borderColor="light"
+        m={{ l: "0.5em" }}  
+        p="0"    
+        onClick={() => window.open("https://www.facebook.com/yun.khngn/")}
+        ><Icon name="Attachment" size="17px" color={theme === 'light' ? "#858585" : "#EDEDED"}/></Button>
       </Div>
     </Template>
   )
