@@ -8,6 +8,8 @@ const Writings = ({content, themeUse, theme, slug}) => {
     const description = {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
+        desc: content.metaDescription,
+        keywords: content.metaKeywords,
     }
     const dateFormer = (date) =>{
         let dateArr = date.split('T')[0].split('-')

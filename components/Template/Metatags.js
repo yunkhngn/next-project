@@ -6,8 +6,8 @@ export default function Metatags({description}) {
             <meta charset="utf-8" />
             <title>{description.title}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta name="description" content="Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."/>
-            <meta name="keywords" content="React, Nextjs, Next JS, Typescript, Cpp, Coding, Language, JavaScript, Reactjs, Khoa Nguyen Blog, Khoa Nguyen, Software Development, Software Engineer, Frontend Developer, Frontend Engineer, Web Developer, KhoaNguyen, Khoa Nguyen Dev, Graphic Designer, Nodejs, Nguyễn Đăng Khoa, Khoa Nguyễn"/>
+            <meta name="description" content={(description.desc) ? description.desc : "Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."}/>
+            <meta name="keywords" content={(description.keyword) ? `${description.keyword}, Blog, Khoa Nguyen, Khoa Nguyễn, Khoa Nguyen, Khoa Nguyn, Nguyễn Đăng Khoa, Post` : "React, Nextjs, Next JS, Typescript, Cpp, Coding, Language, JavaScript, Reactjs, Khoa Nguyen Blog, Khoa Nguyen, Software Development, Software Engineer, Frontend Developer, Frontend Engineer, Web Developer, KhoaNguyen, Khoa Nguyen Dev, Graphic Designer, Nodejs, Nguyễn Đăng Khoa, Khoa Nguyễn"}/>
             <meta name="author" content="Khoa Nguyen" />
             <meta name="robots" content="index, follow" />
             <meta name="revisit-after" content="1 days" />
@@ -40,14 +40,14 @@ export default function Metatags({description}) {
             <meta property="og:type" content="website"/>
             <meta property="og:url" content={description.url}/>
             <meta property="og:title" content={description.title}/>
-            <meta property="og:description" content="Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."/>
+            <meta property="og:description" content={(description.desc) ? description.desc : "Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."}/>
             <meta property="og:image" content="/favicon/wall.png"/>
             <meta property="og:image:alt" content="A rainy day"/>
             {/* <!-- Twitter --> */}
             <meta property="twitter:card" content="summary_large_image"/>
             <meta property="twitter:url" content={description.url}/>
             <meta property="twitter:title" content={description.title}/>
-            <meta property="twitter:description" content="Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."/>
+            <meta property="twitter:description" content={(description.desc) ? description.desc : "Khoa Nguyễn is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures."}/>
             <meta property="twitter:image" content="/favicon/wall.png"/>
             {/* <!-- SEO--> */}
             <meta name="googlebot" content="notranslate"/>
