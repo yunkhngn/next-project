@@ -5,11 +5,12 @@ import ElementSpace from '../../components/Post/ElementSpace';
 import ReactMarkdown from 'react-markdown'
 
 const Writings = ({content, themeUse, theme, slug}) => {
+    console.log(content);
     const description = {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
         desc: content.metaDescription,
-        keywords: content.metaKeywords,
+        keywords: content.metaKeyword,
     }
     const dateFormer = (date) =>{
         let dateArr = date.split('T')[0].split('-')
