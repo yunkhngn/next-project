@@ -5,7 +5,6 @@ import ElementSpace from '../../components/Post/ElementSpace';
 import ReactMarkdown from 'react-markdown'
 
 const Writings = ({content, themeUse, theme, slug}) => {
-    console.log(content);
     const description = {
         title: content.Title + '- Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
