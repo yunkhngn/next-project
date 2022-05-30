@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 
 const Writings = ({content, themeUse, theme, slug}) => {
     const description = {
-        title: content.Title + '- Khoa Nguyễn',
+        title: content.Title + ' - Khoa Nguyễn',
         url: `https://www.khoanguyen.dev/writings/${slug}`,
         desc: content.metaDescription,
         keywords: content.metaKeyword,
