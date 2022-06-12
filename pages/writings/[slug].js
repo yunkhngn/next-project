@@ -34,7 +34,7 @@ const Writings = ({content, themeUse, theme, slug}) => {
         <Template description={description} height="100%">
             <Title color={themeUse.primary}>{content.Title}</Title>
             <div className="essay">
-            <Para margin="true" which="top" color={themeUse.secondary}><strong>Date modified:</strong> {dateFormer(content.updatedAt)}</Para>
+            <Para margin="true" which="top" color={themeUse.secondary}><strong>Date modified:</strong> {dateFormer(content.createdAt)}</Para>
             <Para color={themeUse.secondary}><strong>Subtitle:</strong> {content.Subtitle} </Para>
             <hr className={'hr'+theme}/>
             <ReactMarkdown>{content.Content}</ReactMarkdown>
