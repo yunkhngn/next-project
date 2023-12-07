@@ -12,7 +12,7 @@ const social = [
       id: 5,
       name: "Instagram",
       icon: "Instagram",
-      link: "https://instagram.com/yun.khngn_",
+      link: "https://instagram.com/yun.khngn",
     },
     {
       id: 6,
